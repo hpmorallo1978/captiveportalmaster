@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" href="http://localhost:8080/captiveportalmaster/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> Wi-Fi Connected </title>
+    <style>
+        #content,
+        .login,
+        .login-card a,
+        .login-card h1,
+        .login-help {
+        text-align: center;
+        }
+
+        body,
+        body,html {
+            margin-top: 0;    
+            padding: 0; 
+            width: 100%; 
+            height: 100%;
+           display: table;     
+     
+        }
+
+        #content {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+           background: url("http://localhost:8080/captiveportalmaster/images/img3.jpg")center center no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            display: table-cell;
+            vertical-align: middle;
+        }
+   
+   .login-card {
+     position: relative;
+     background: url("http://localhost:8080/captiveportalmaster/images/img2.jpg")center center no-repeat fixed;
+     width: 380px;
+      height: 45 0px;     
+      padding: 5px;    
+      /*background-color: #1c5535;*/
+      margin: 10px auto 10px; 
+      border-radius: 5px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+      overflow: hidden;
+    }
+    label {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;       
+            font-size: 20px;
+            color:#a51616;
+            margin-top: 10%;
+            margin-left: 25%;
+        }
+
+    label2 {      
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            text-align: left;
+            font-size: 14px;
+            color:#68ffb4;
+            margin-top: 10%;
+        }   
+        img {          
+            height: 10%;
+            width: 10%;
+        }   
+
+	.blink {
+        animation: blinker 2.6s linear infinite;    
+        color: #ee5252;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: sans-serif;       
+      }
+      @keyframes blinker {
+        50% {
+          opacity: .1;
+        }
+      }
+      .blink-one {
+        animation: blinker-one 3.0s linear infinite;
+      }
+      @keyframes blinker-one {
+        0% {
+          opacity: .5;
+        }
+      }
+      .blink-two {
+        animation: blinker-two 3.0s linear infinite;
+      }
+      @keyframes blinker-two {
+        100% {
+          opacity: .1;
+        }
+	}
+  
+      span{
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;   }
+
+       span:hover {
+            transform: scale(1.1);
+            transition: 1.2s;    }
+       
+      ads{
+            color:rgb(236, 238, 128);
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 18px; 
+            } 
+
+        footer {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgba(29, 29, 27, 0.904);
+            text-align: center;
+            font-size: 16px;
+            background-color: #befad7;
+            border-radius: 1px;
+            letter-spacing: .001rem;
+            margin-top: 50px;
+            font-style: oblique ;
+            }
+
+       .footer-link {          
+            color: rgb(241, 238, 11);
+            text-decoration: none;  }         
+        .checked{
+          color: orange;
+        }
+    </style>
+</head>
+
+<body>  
+
+  <div id="content">      
+    <div class="Section_top">
+      <div class="login-card">           
+        <center>   <img src="http://localhost:8080/captiveportalmaster/banner1.jpg" 
+           style="width:100%; height:15%; border-radius: 0px; margin-top: 1px;">                  
+            <br><br>
+             <form name="login_form" method="post" action="$PORTAL_ACTION$">      
+         
+             <a class="blink" style="color:rgb(248, 9, 9); font-weight: 800;">Wi-Fi Connected</a> 
+             <br>
+             <ads style="color:rgb(250, 246, 207);"> Enjoy free Internet access</ads> 
+             <br><br>
+             <ads> Research Ads</ads>             
+             <!--a href="https://bit.ly/42k2zjN"--> 
+             <a href=" https://drive.google.com/file/d/1Oy1B-3NLFdXmeeyzVh8t7MhJlb6-njIb/view?usp=sharing">
+              <br>            
+                <img src="http://localhost:8080/captiveportalmaster/images/surveyqrcode.png"  style="width:30%; height:10%; "></a>
+               <br>
+               <a href="https://drive.google.com/file/d/1Oy1B-3NLFdXmeeyzVh8t7MhJlb6-njIb/view?usp=drive_link"
+                style="color:rgb(236, 44, 18); font-weight:800;"></a>
+         
+           <a href="https://docs.google.com/forms/d/e/1FAIpQLScMP3eno9DNOBXTd6PMNsuGxs1KKIgXI7cn4IZpmIyJkuQexQ/viewform"
+              style="color:rgb(61, 223, 196); font-weight:800;">
+              <ads>Survey Form</ads>
+          </a>
+          <br>    
+          
+          <h5 class="fa fa-star checked"></h5>
+          <h5 class="fa fa-star checked"></h5>
+          <h5 class="fa fa-star checked"></h5>
+          <h5 class="fa fa-star checked"></h5>
+          <h5 class="fa fa-star checked"></h5>
+           <br>                           
+          </center>  
+     
+          </form>  
+          <footer>                         
+            <h4> All Rights Reserved © 2023</h4>
+          </footer>
+       </div>   
+  </div>
+</body>
+</html>

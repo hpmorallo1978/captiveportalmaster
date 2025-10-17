@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!----==== CSS ====-->
+	<title>UCC, Inc Free Wi-Fi</title>
+    <link rel="stylesheet" href="http://localhost:8080/captiveportalmaster/css/style.css">
+
+	
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<title>Login Page</title>
+	<style>
+		#content,
+		.login,
+		.login-card a,
+		.login-card h1,
+		.login-help {
+			text-align: center;
+		}
+
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			display: table;
+		}
+
+		#content {	
+			font-family: 'Source Sans Pro', sans-serif;      
+			background: url("http://localhost:8080/captiveportalmaster/images/img5.jpg") center center no-repeat fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.login-card {			
+			position: relative;	
+			padding: 10px;
+			width: 400px;
+			height: 500px;			
+			background: url("http://localhost:8080/captiveportalmaster/images/img3.jpg"); 			
+			margin: 5px auto 0px;
+			border-radius: 5px;
+			box-shadow: 2px rgba(11, 99, 3);
+			overflow: hidden;	
+			margin-top: 10%;			
+		}
+
+		.login-card h1 {
+			font-weight: 400;
+			font-size: 2.3em;
+			color: #1383c6;
+		}
+
+		.login-card h1 span {
+			color: #f26721;
+		}
+
+
+		.login-card img {
+			width: 70%;
+			height: 70%;
+		}
+
+		.login-card input[type=submit] {
+			width: 50%;
+			display: block;
+			margin-bottom: 5px;
+			position: relative;
+		}
+
+		.login-card input[type=text],
+		input[type=password] {
+			height: 40px;
+			font-size: 16px;
+			width: 100%;
+			margin-bottom: 1px;
+			background: #fff;
+			border: 1px solid #046b23;
+			border-top: 1px solid rgb(5, 102, 5);
+			padding: 1 8px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			margin-bottom: 2%;;
+		}
+
+		.login-card input[type=text]:hover,
+		input[type=password]:hover {
+			border: 1px solid #b9b9b9;
+			border-top: 1px solid #a0a0a0;
+			-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+			-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+			box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+		}
+
+		.login {
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			font-weight: 700;
+			height: 36px;
+			padding: 0 8px;
+		}
+
+		.login-submit {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border: 0;
+			color: #fff;
+			text-shadow: 0 1px rgba(0, 0, 0, .1);
+			background-color: #0d5a06;
+		}
+
+		.login-submit:disabled {
+			opacity: .5;
+		}
+
+		.login-submit:hover {
+			border: 0;
+			text-shadow: 0 1px rgba(0, 0, 0, .3);
+			background-color: #054b0b;
+		}
+
+		.login-card a {
+			text-decoration: none;
+			color: #222;
+			font-weight: 800;
+			display: inline-block;
+			opacity: 5;
+			transition: opacity ease .5s;
+		}
+
+		.login-card a:hover {
+			opacity: 1;
+			transition: 2.2s;
+
+		}
+
+		.login-help {
+			width: 100%;
+			font-size: 10px;
+		}
+
+		.list {
+			list-style-type: none;
+			padding: 10px;
+		}
+
+		.list__item {
+			margin: 0 0 .7rem;
+			padding: 0;
+		}
+
+		label {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			text-align: right;
+			font-size: 16px;
+			color: rgb(250, 249, 249);			
+		}
+
+				
+		input[type=checkbox] {		
+			-webkit-box-flex: 0;
+			-webkit-flex: none;
+			-ms-flex: none;
+			flex: none;				
+			 float:left;
+			 margin-right: 10px;
+			 margin-left: 10px;
+					
+		}
+
+
+		@media screen and (max-width:450px) {
+			.login-card {
+				width: 70% !important
+			}
+
+			.login-card img {
+				width: 30%;
+				height: 30%
+			}
+		}
+
+		textarea {
+
+			width: 80%;	   
+			margin: auto; 
+			font-size: 12px;
+			height: 320px;
+			background-color: #dee4e9;
+			padding: 5px;
+			text-align: justify;
+		}
+
+		#terms {
+			display: none;
+			padding-top: 50px;
+			padding-bottom: 300px;
+		}
+
+
+		.auth_source {
+			border: 1px solid lightgray;
+			padding: 20px 8px 0px 8px;
+			margin-top: -2em;
+			border-radius: 2px;
+		}
+
+		.auth_head {
+			background-color: #f7f7f7;
+			display: inline-block;
+		}
+
+		.auth_head_div {
+			text-align: left;
+		}
+
+		#error-message {
+			text-align: left;
+			color: #ff3e3e;
+			font-style: italic;
+		}
+
+		button {
+			width: 50%;	
+			height: 40px;
+			background-color: rgba(49, 247, 98, 0.925);
+			color: #dd590d;	
+			padding: 5px 5px;
+			font-size: 17px;		
+			font-weight: 700;
+			border-radius: 10px;  
+			cursor: pointer;
+			transition: 1.5s;
+		}
+		button:hover {
+			transform: scale(1.1);
+			transition: 1.2s;
+		}
+
+		span {
+			color: rgb(245, 245, 245);
+			font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-size: 16px;
+			font-weight: 600;
+			text-shadow: #f26721;
+		}
+		span:hover {
+			transform: scale(1.1);
+			transition: 1.5s;
+		}
+		footer {
+			display: block;	
+			color: rgba(248, 243, 243);
+			text-align: center;		
+			font-size: 18px;
+			font-style: oblique; 
+		    background-color: #1c4911;			
+			letter-spacing: .03rem;
+			position: relative;	
+			margin-top: 3%;
+		}
+	</style>
+</head>
+<body>
+<div id="content">	
+	<div class="Section_top">
+		<div class="login-card">			
+			<img src="http://localhost:8080/captiveportalmaster/banner1.jpg" style="width: 100%; height: 15%;">
+				<br><br> <br>
+				<form name="login_form" method="post" action="$PORTAL_ACTION$">
+					<input type="text" name="auth_user" placeholder="Enter Username" id="auth_user">
+					<input type="password" value="" name="auth_pass" placeholder="Password" id="auth_pass">
+					<br>	
+					<a>	<input type="checkbox" onclick="myFunction()"> <span style="color: rgb(30, 224, 12);"> Show Password</a>
+						<script>
+							function myFunction() {
+							  var x = document.getElementById("auth_pass");
+							  if (x.type === "password") {
+								x.type = "text";
+							  } else {
+								x.type = "password";
+							  }
+							}
+							</script>							
+				
+					
+					<div class="login-help">
+						<ul class="list">
+							<li class="list__item">
+								<label class="label--checkbox">
+									<input type="checkbox" class="checkbox"
+										onchange="document.getElementById('login').disabled = !this.checked;">
+
+									<label>I agree with the <a rel="noopener" href="#terms"
+											onclick="document.getElementById('terms').style.display = 'block';"
+											 style="color:rgb(37, 233, 30); font-size: 16px; font-weight: 600;">
+											"Terms & Conditions"</a>
+									</label>
+								</label>																	
+							</li>
+						</ul>
+					</div>
+					
+				
+					<input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">					
+					<!--input name="zone" type="hidden" value="$PORTAL_ZONE$"-->
+				<center>	
+					<!--input type="submit" name="accept" class="login login-submit" value="Login" id="login" disabled>Login-->
+					<button>
+					<input type="hidden" name="accept" class="login login-submit" value="Login" id="login"disabled>Login
+					</button>
+					<br><br>
+					<!--a href="http://localhost:8080/captiveportalmaster/portalvoucher.html"
+					    style="color:rgb(116, 240, 132); text-shadow: 2px 1px 2px rgb(255, 2, 2); font-size: 16px; font-weight: 800;">
+					      Input your Voucher Code</a>
+					     <i class="fa fa-pencil-square-o" style="font-size:20px;color:rgb(37, 247, 10); text-shadow: 2px 1px 2px rgb(255, 2, 2);"></i>
+						 <--i class="	fas fa-users"style="font-size:24px;"></i-->
+					<br>						
+				</center>				
+			</form>		
+			
+			<marquee behavior="alternate" directions="left" scrollamount="2">
+				<a href="http://localhost:8080/captiveportalmaster/entervoucher.html"
+				style="color:rgb(240, 61, 6); text-shadow: 2px 1px 2px #64e785;font-size:16px; font-weight:800;margin-top: 15%;">  For Guest Only
+				<i class="fa fa-home" style="font-size:20px;color:rgb(73, 245, 30); text-shadow: 2px 1px 2px rgb(255, 2, 2);"></i>
+				 </marquee>	 	
+				 <footer> All Rights Reserved © 2023 </footer>		   
+	</div>
+<div id="terms"> <textarea readonly>
+	Terms and Conditions
+  
+	These are the terms and conditions for  Free Internet access ("Free-Wi-Fi Service")  for all sectors (Non-Teaching Personnel, Teacher/Faculty, and Students (18 years old above)). Free Wi-Fi Service is a joint project from anonymous researcher and the IT Department.  It is currently  on a testing phase. A random disconnection from the internet can occur at any time. 
+		   
+   The management also ask you to read carefully our terms and conditions below. When you connect to our Free-Wi-Fi service, you must click the checkbox indicating that you are agree with the Terms and Conditions in order to continue to free access of Internet. 
+		   
+	By accepting these Terms & Conditions, you represent that you are of legal age to agree to these Terms & Conditions. If you do not agree to these Terms and Conditions, you may freely close the browser appear on your device.	However,  if you are below 18 years old, you should submit a letter consent from your parent or guardian to be able to use the Wi-Fi Service implemented by UCC, Inc.
+		  
+	By using our Internet service, you hereby expressly acknowledge and agree that there are significant security, privacy and confidentiality risks inherent in accessing or transmitting information through the Internet, whether the connection is facilitated through wired or wireless technology. Security issues include, without limitation, interception of transmissions, loss of data, and the introduction or viruses and other programs that can corrupt or damage your computer.
+	Accordingly, you agree that the owner and/or provider of this network is NOT liable for any interception or transmissions, computer worms or viruses, loss of data, file
+   corruption, hacking or damage to your computer or other devices that result from the transmission or download of information or materials through the internet service
+   provided.
+	Use of the wireless network is subject to the general restrictions outlined below. If abnormal, illegal, or unauthorized behavior is detected, including heavy consumption of bandwidth, the network provider reserves the right to permanently disconnect the offending device from the wireless network.
+		  
+	General Policy on using Free Wi-Fi Services.
+		  
+   1.Spamming and invasion of privacy - Sending of unsolicited bulk and/or commercial messages over the Internet using the Service or using the Service for activities that invade another's privacy.
+   2.The transfer of technology, software, or other materials in violation of applicable export laws and regulations.
+   3.Surfing of any pornographic sites
+   4.Distribution of Internet viruses, Trojan horses, or other destructive activities
+   5.Prohibited of playing any Internet Games.
+   6.Prohibited of playing any online gambling games
+   7.Watching online streaming that consumes high-bandwidth (Netflix, porn sites, etc)
+   8.Unauthorized accessed to the network equipment (Routers, Switches, Servers)
+   9.Making unauthorized attempts to access to any PC connected within the network. 
+   10.Hacking of confidential files to any confidential records belongs to the company files is prohibited.
+   </textarea> </div>
+		</div>
+	</div>
+</body>
+</html>

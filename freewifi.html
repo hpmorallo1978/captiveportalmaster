@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Free Wi_Fi</title>
+    <link rel="stylesheet" href="http://localhost:8080/captiveportalmaster/css/style.css"> 
+
+    <style>
+        #content,
+        .login,
+        .login-card a,
+        .login-card h1,
+        .login-help {
+            text-align: center;
+        }
+
+        body,
+        html {
+            margin: 0;    
+            padding: 0;   
+            width: 100%;  
+            height: 100%;
+            display: table;
+        }
+
+        #content {
+            font-family: Georgia, 'Times New Roman', Times, serif;           
+            background: url("http://192.168.0.147:8080/captiveportalmaster/images/img2.jpg")center center no-repeat fixed;                 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .login-card {
+			padding: 2px;
+			width: 350px;
+			height: 450px;
+			background: url("http://192.168.0.147:8080/captiveportalmaster/images/img3.jpg");
+			margin: 0 auto 10px;
+			border-radius: 15px;
+			box-shadow: 2px rgba(11, 99, 3);
+			overflow: hidden;
+			vertical-align: middle;
+            margin-top: 10%;
+
+        }
+
+
+        img {
+            margin-top: 1%;
+            height: 100%;
+            width: 100%;
+        }
+
+        label {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            text-align: center; 
+            font-size: 15px;
+            font-weight: 800;
+            color:cornsilk;
+        }
+
+        label2 {        
+             
+            margin-top: 10%;  
+            height: 12px;
+            color: rgb(243, 245, 255);
+            text-shadow: 2px#ad175d;
+            font-size: 15px;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        button {
+            margin-top: 5%;
+            width: 60%;
+            height: 40px;
+            background-color: rgba(230, 229, 238, 0.925);
+            color: #1010db;
+            padding: 5px 5px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 1.5s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            transition: 1.2s;
+        }
+
+        input:hover {
+            transform: scale(1.1);
+            transition: 1.2s;
+        }        
+
+        .login-help {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list__item {
+            margin: 0 0 .7rem;
+            padding: 0;
+        }
+
+
+        input[type=checkbox] {
+            -webkit-box-flex: 0;
+            -webkit-flex: none;
+            -ms-flex: none;
+            flex: none;
+            margin-right: 10px;
+            float: left;
+        }
+
+        textarea {
+            width: 80%;
+            margin: auto;
+            height: 300px;     
+            background-color: #d4f8bc;
+            padding: 5px;
+            text-align: justify;;           
+        }
+
+        #terms {
+            display: none;
+            padding-top: 8px;
+            padding-bottom: 25px;
+        }
+        #terms:hover {
+            transform: scale(1.1);
+            transition: 1.2s;
+        }
+
+        .auth_source {
+            border: 2px solid lightgray;
+            padding: 2px 8px 0px 8px;
+            margin-top: -2em;
+
+        }
+
+        .auth_head {
+            background-color: #f7f7f7;
+            display: inline-block;
+        }
+
+        .auth_head_div {
+            text-align: left;
+        }
+
+        #error-message {
+            text-align: left;
+            color: #ff3e3e;
+            font-style: italic;
+        }
+
+        footer {
+            color: rgba(254, 255, 252, 0.904);
+            text-align: center;
+            font-size: smaller;
+            font-style: oblique;
+            background-color: #093b02;
+            letter-spacing: .03rem;
+            margin-top: 25%;
+        }
+        .footer-link {
+            color: rgb(174, 212, 149);
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #14aa06;
+        }
+    </style>
+</head>
+
+<body>
+	<div id="content">
+        <div class="Section_top"> 
+		  <div class="login-card">
+			
+				<img src="http://192.168.0.147:8080/captiveportalmaster/banner1.jpg"
+                      style="width:100%;  height:15%; border-radius:5px;">
+				<br><br>
+				<center>
+					<marquee behavior="alternate" directions="left" scrollamount="2"
+						style="color:rgb(53, 133, 16); text-shadow: 2px 1px 2px #0b2b13; 
+                        font-size:25px; font-weight:800; width:100%; margin-bottom: 10%;; margin-top:1%;">
+						Free WiFi
+                    </marquee>		</center>
+                 <br><br>   
+            <form name="login_form" method="post" action="$PORTAL_ACTION$">
+				<div id="error-message"></div>
+             
+				<div class="login-help">
+					<ul class="list">
+						<li class="list__item">
+							<label class="label--checkbox">
+								<input type="checkbox" class="checkbox"
+									onchange="document.getElementById('login').disabled = !this.checked;">
+								<span>I agree with the <a rel="noopener" href="#terms"
+										onclick="document.getElementById('terms').style.display = 'block';"
+										style="color:rgb(78, 241, 133); text-shadow: #f074a4; font-size: 16px; font-weight:600;  font-style: oblique;">
+										"Terms & Conditions"</a></span>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<input name="zone" type="hidden" value="$PORTAL_ZONE$">
+                <button>  <input name="accept" type="hidden" class="login login-submit" 
+                      value="Continue" id="login" disabled>Continue
+                </button>   
+                <br><br><br>
+
+                <!--span>
+                    <a href="http://192.168.0.147:8080/captiveportalmaster/entervoucher.html"
+                    style="color: rgb(67, 245, 13); font-size: 18px;">Enter Voucher Code
+               </a> </span-->
+          
+			</form>
+		
+                <footer>                    
+				    <label2> All Rights Reserved © 2023</label2>
+                </footer>
+			
+	    </div>
+   
+
+   <div id="terms"><textarea readonly>
+Terms and Conditions
+ 
+ These are the terms and conditions for  Free Internet access ("Free-Wi-Fi Service")  for all sectors (Non-Teaching Personnel, Teacher/Faculty, and Students (18 years old above). Free Wi-Fi Service is a joint project from anonymous researcher and the IT Department.  It is currently  on a testing phase. A random disconnection from the internet can occur at any time. 
+ 
+ The management also ask you to read carefully our terms and conditions below. When you connect to our Free-Wi-Fi service, you must click the checkbox indicating that you are agree with the Terms and Conditions in order to continue to free access of Internet. 
+ 
+ By accepting these Terms of Services, you represent that you are of legal age to agree to these Terms of Service. If you do not agree to these Terms and Conditions, you may freely close the browser appear on your device.	However,  if you are below 18 years old, you should submit a letter consent from your parent or guardian to be able to use the Wi-Fi Service implemented by UCC, Inc.
+
+  By using our Internet service, you hereby expressly acknowledge and agree that there are significant security, privacy and confidentiality risks inherent in accessing or transmitting information through the Internet, whether the connection is facilitated through wired or wireless technology. Security issues include, without limitation, interception of transmissions, loss of data, and the introduction or viruses and other programs that can corrupt or damage your computer.
+Accordingly, you agree that the owner and/or provider of this network is NOT liable for any interception or transmissions, computer worms or viruses, loss of data, file
+corruption, hacking or damage to your computer or other devices that result from the transmission or download of information or materials through the internet service
+provided.
+ The usage of the wireless network is subject to the general restrictions outlined below. If unusual, illegal, or unauthorized behavior is detected, including heavy consumption of bandwidth, the network administrator has the right to permanently disconnect the offending device from the wireless network.
+
+	General Policy on using Free Wi-Fi Services.
+
+1.Spamming and invasion of privacy - Sending of unsolicited bulk and/or commercial messages over the Internet using the Service or using the Service for activities that invade another's privacy.
+2.The transfer of technology, software, or other materials in violation of applicable export laws and regulations.
+3.Surfing of any pornographic sites
+4.Distribution of Internet viruses, Trojan horses, or other destructive activities
+5.Prohibited of playing any Internet Games.
+6.Prohibited of playing any online gambling games
+7.Watching online streaming that consumes high-bandwidth (Netflix, porn sites, etc)
+8.Unauthorized accessed to the network equipment (Routers, Switches, Servers)
+9.Making unauthorized attempts to access to any PC connected within the network. 
+10.Hacking of confidential files to any confidential records belongs to the company files is prohibited.
+11. Changing DNS IP Address or using software tools to connect to illicit websites is also prohibited. The MAC address of the registered device will be blocked by the Network Administrator.
+</textarea> </div>		
+    </div>
+</div>   
+</body>
+</html>
